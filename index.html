@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!--Font Awesome Icons included here-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	  crossorigin="anonymous">
+	<!--Bootstrap included here-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	  crossorigin="anonymous">
+	<!--CSS Stylesheet included here-->
+  	<link rel="stylesheet" href="./Files/style.css">
+  	<title>APMK Bank</title>
+  	<link rel="icon" href="./Files/Images/Logo.PNG" type="image/x-icon">
+	<!-- React JS included here -->
+	<script src="js/react.development.min.js"></script>
+	<script src="js/react-dom.development.min.js"></script>
+	<script src="js/browser.min.js"></script>
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"> <!--Bootstrap classes used-->
+	<div class="container">
+		<a href="index.html" class="navbar-brand">
+		APMK Bank
+		</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"> <!--Bootstrap classes used-->
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+			<a href="index.html" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+			<a href="./Files/info.html" class="nav-link">Information</a>
+			</li>
+			<li class="nav-item">
+			<a href="./Files/calculator.html" class="nav-link">Calculator</a>
+			</li>
+			<li class="nav-item">
+			<a href="./Files/signup.html" class="nav-link">Sign Up</a>
+			</li>
+			<li class="nav-item">
+			<a href="./Files/contactus.html" class="nav-link">Contact Us</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</nav>
+
+	<!--HOME SECTION-->
+	<header id="home-section"> <!--CSS id used-->
+		<div class="dark-overlay"> <!--CSS classes used-->
+		<div class="p-5"></div>
+		<div class="p-3"></div>
+		  <div class="home-inner container">
+			<div class="row"> <!--Bootstrap classes used-->
+			  <div class="col-lg-8 d-lg-block">
+				  <h1 class="display-4">One Stop For All Your <strong>BANKING NEEDS</strong>!</h1>
+				  <br>
+				  <h4 class="d-none d-md-block">Apply Online via APMK Bank online services</h4>				  
+					<div class="row">
+						<div class="col-md-6 d-none d-md-block">
+							<div class="p-4">
+							<i class="fas fa-check"></i>
+							<font class="p-4 text-large">Credit & Travel Card</font>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="p-4">
+							<i class="fas fa-check"></i>
+							<font class="p-4 text-large">Personal Banking</font>
+							</div>
+						</div>
+					</div>		
+					<div class="row">
+						<div class="col-md-6">
+							<div class="p-4">
+							<i class="fas fa-check"></i>
+							<font class="p-4 text-large">Loan & Insurance</font>
+							</div>
+						</div>
+						<div class="col-md-6 d-none d-md-block">
+							<div class="p-4">
+							<i class="fas fa-check"></i>
+							<font class="p-4 text-large">Corporate Banking</font>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 d-none d-md-block">
+							<div class="p-4">
+							<i class="fas fa-check"></i>
+							<font class="p-4 text-large">Equities & Derivatives</font>
+							</div>
+						</div>
+						<div class="col-md-6 d-none d-md-block">
+							<div class="p-4" id="hover2">
+							<i class="fas fa-check"></i>
+							<font class="p-4 text-large">Forex</font>
+							</div>
+						</div>
+					</div>
+			  </div>
+			  <div class="col-lg-4 d-none d-lg-block">
+				<br>
+				<div class="card bg-primary text-center card-form">
+				  <div class="card-body">
+					<h3>Access Our Services</h3>
+					<br>
+					<form onreset="onResetFunction()">
+					  <div class="form-group">
+						<input onblur="alert(this.value)" placeholder="Customer ID" class="form-control form-control-lg">
+					  </div>
+					  <div class="form-group">
+						<input type="password" class="form-control form-control-lg" placeholder="Password" onchange="alert(this.value)" type="number" id="inp">
+					  </div>
+					  <div class="form-group">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+							<label class="form-check-label" for="inlineRadio1">Personal</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+							<label class="form-check-label" for="inlineRadio2">Corporate</label>
+						</div>
+					  </div>
+					  <button type="button" onclick="onClickDisplay()" class="btn btn-outline-light btn-block">Login</button>
+					  <br>
+					  <input type="reset" value="Reset" class="btn btn-outline-light btn-block">
+					</form>
+					<form>
+					  <p>Don't Have An Account?</p>
+					  <a href="./Files/signup.html" class="btn btn-outline-light btn-block">Sign Up</a>
+					</form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="p-3"></div>
+		  </div>
+		</div>
+	</header>
+
+	<!--MARQUEE SECTION-->
+	<div class="container" id="hover1" onmouseover="onMouseOverVanish()">
+		<marquee class="text-large d-none d-md-block">Never share your CVV/PIN/OTP/Expiry Date or any other info of your card/account over phone or any other media. Bank never asks any such information from customers.</marquee>
+	</div>
+
+	<!--BLOGS SECTION-->
+	<section id="blog-title" class="text-center p-4 bg-dark text-white"> <!--Bootstrap classes used-->
+		<div class="container">
+			<h2 class="display-4" id="demo">Learn & Earn</h2>
+		</div>
+	</section>
+	<br>
+	<section id="blogs-main" class="container">
+		<div class="row"> <!--Bootstrap classes used-->
+			<div class="col">
+			  <div class="card-columns">
+				<div class="card d-lg-4 d-sm-12">
+				  <img src="./Files/Images/blog1.jpg"	class="img-fluid card-img-top"/>
+				  <div class="card-body">
+					<h4 class="card-title text-dark">
+						5 Reasons To Apply For Medical Loan
+					</h4>
+					<small class="text-muted">January 04, 2021</small>
+					<hr />
+					<p class="card-text">
+						Emergencies are rare, but they are always unexpected. When you are faced with a tough situation, you may need funds quickly. When you face a medical emergency, the last thing you want is to file paperwork to raise funds. APMK Bank Personal Loans are quick and hassle-free. Pre-approved customers don’t need any documentation and for other customers the documentation is minimal.
+					</p>
+				  </div>
+				  <div class="card-footer">
+					<a href="#" class="btn btn-outline-dark btn-block">Read More</a>
+				  </div>
+				</div>
+				<div class="card d-lg-4 d-sm-12">
+				  <img src="./Files/Images/blog2.jpg" class="img-fluid card-img-top" />
+				  <div class="card-body">
+					<h4 class="card-title text-dark">
+						Store Banking Passwords Safely
+					</h4>
+					<small class="text-muted">December 07, 2020</small>
+					<hr />
+					<p class="card-text">
+						In recent times, both internet and personal banking have caught on quite rapidly, with many people opting to bank online or over the phone. Since your bank accounts are the gateways to your finances, it is extremely important to keep them safe from unauthorised access.
+					</p>
+				  </div>
+				  <div class="card-footer">
+					<a href="#" class="btn btn-outline-dark btn-block">Read More</a>
+				  </div>
+				</div>
+				<div class="card d-lg-4 d-sm-12">
+					<img src="./Files/Images/blog3.jpg" class="img-fluid card-img-top" />
+					<div class="card-body">
+					  <h4 class="card-title text-dark">
+						Travel Checklist
+					  </h4>
+					  <small class="text-muted">December 09, 2020</small>
+					  <hr />
+					  <p class="card-text">
+						Seasoned travellers prefer carrying Forex Cards rather than currency notes for the sake of safety. An excellent option is the APMK Bank ForexPlus Card that allow easy online currency management in foreign countries. There are different types of cards you can choose from, based on your requirements. You can even transfer the balance on the card from one currency to another while travelling across borders for additional flexibility.
+					  </p>
+					</div>
+					<div class="card-footer">
+					  <a href="#" class="btn btn-outline-dark btn-block">Read More</a>
+					</div>
+				</div>
+				<div class="card d-lg-4 d-sm-12">
+					<img src="./Files/Images/blog4.jpg" class="img-fluid card-img-top" />
+					<div class="card-body">
+					  <h4 class="card-title text-dark">
+						Save Tax With Mutual Funds
+					  </h4>
+					  <small class="text-muted">December 12, 2020</small>
+					  <hr />
+					  <p class="card-text">
+						Mutual funds, also known as Equity Linked Savings Scheme (ELSS), are great tax-saving instruments under Section 80C of the Income Tax Act, 1961. This section allows you to claim benefits from your taxable income if you put your money into certain investments.
+					  </p>
+					</div>
+					<div class="card-footer">
+					  <a href="#" class="btn btn-outline-dark btn-block">Read More</a>
+					</div>
+				</div>
+				<div class="card d-lg-4 d-sm-12">
+					<img src="./Files/Images/blog6.jpg" class="img-fluid card-img-top" />
+					<div class="card-body">
+					  <h4 class="card-title text-dark">
+						Benefits Of Personal Loan To Repay Debt
+					  </h4>
+					  <small class="text-muted">December 18, 2020</small>
+					  <hr />
+					  <p class="card-text">
+						Personal Loans are one of the best products offered by banks. They are often unsecured in nature i.e. you do not have to provide any collateral against the loan. The loan amount is typically sanctioned and disbursed in a just a couple of days.
+					  </p>
+					</div>
+					<div class="card-footer">
+					  <a href="#" class="btn btn-outline-dark btn-block">Read More</a>
+					</div>
+				</div>
+				<div class="card d-lg-4 d-sm-12">
+					<img src="./Files/Images/blog5.jpg" class="img-fluid card-img-top" />
+					<div class="card-body">
+					  <h4 class="card-title text-dark">
+						Understanding Mobile Banking
+					  </h4>
+					  <small class="text-muted">December 14, 2020</small>
+					  <hr />
+					  <p class="card-text">
+						With the popularity of online banking and the growing use of mobile web browsing, Mobile Banking is becoming an everyday task for most people. More so, because it’s convenient, easy and can be accessed on the go. But what is Mobile Banking? Simply put, Mobile Banking is the use of financial services over mobile devices such as cellular phones.
+					  </p>
+					</div>
+					<div class="card-footer">
+					  <a href="#" class="btn btn-outline-dark btn-block">Read More</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</section>
+
+	<!--VIDEO PLAY-->
+	<section id="video-play"> <!--CSS id used-->
+	<div class="dark-overlay"> <!--CSS classes used-->
+		<div class="row"> <!--Bootstrap classes used-->
+		<div class="col">
+			<div class="container p-5">
+			<a href="#" class="video" data-video="https://www.youtube.com/embed/fTTGALaRZoc" data-toggle="modal" data-target="#videoModal">
+				<i class="fas fa-play fa-3x"></i>
+			</a>
+			<h1>Money & Credit</h1>
+			</div>
+		</div>
+		</div>
+	</div>
+	</section>
+
+	<!--VIDEO MODAL-->
+	<div class="modal fade" id="videoModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-body">
+			<button class="close" data-dismiss="modal">
+			<span>&times;</span>
+			</button>
+			<iframe width="100%" height="300" src="https://www.youtube.com/embed/fTTGALaRZoc" frameborder="0" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>
+	</div>
+
+	<!--INFO SECTION-->
+	<section id="info" class="py-3">
+	<div class="container">
+		<div class="row">
+		<div class="col-md-6 align-self-center">
+			<br>
+			<h3>NPS Scheme</h3>
+			<p>
+				NPS is largely focused on one's retirement. While up to 60% of the maturity corpus can be withdrawn as a lump sum on maturity, the balance is compulsorily annuitized, i.e., balance is used to fund the annuity (pension) after retirement. This annuity is fully taxable in the year of receipt as income from other sources.
+			</p>
+			<p>
+				1. Portability
+				<br>
+				2. Flexible
+				<br>
+				3. Economical
+				<br>
+				4. Voluntary
+			</p>
+			<a href="https://enps.nsdl.com/eNPS/NationalPensionSystem.html" target="_blank" class="btn btn-outline-primary btn-lg">Learn More</a>
+		</div>
+		<div class="col-md-6">
+			<br>
+			<img src="./Files/Images/info.jpg" class="img-fluid">
+		</div>
+		</div>
+		<br>
+	</div>
+	</section>
+
+	<!--FOOTER-->
+	<footer id="main-footer" class="text-center p-4"> <!--Bootstrap classes used-->
+		<div class="container">
+		  <div class="row">
+			<div class="col">
+				<p>Copyright &copy; <span id="year"></span> | APMK Bank | Arya Karambelkar</p> <!--Javascript used-->
+			</div>
+		  </div>
+		</div>	
+    </div>
+	</footer>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="./Files/script.js"></script>
+	<!--Javascript declared here-->
+	<script>
+	// Get the current year for the copyright
+		$('#year').text(new Date().getFullYear());
+
+	//Disable zoom
+    document.addEventListener('touchmove', function(event) {
+    event = event.originalEvent || event;
+    if(event.scale > 1) {
+      	event.preventDefault();
+    }
+    }, false);
+
+	</script>
+
+</body>
+
+</html>

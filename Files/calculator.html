@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!--Font Awesome Icons included here-->
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	  crossorigin="anonymous">
+	<!--Bootstrap included here-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	  crossorigin="anonymous">
+	<!--CSS Stylesheet included here-->
+  	<link rel="stylesheet" href="./style.css">
+	  <link rel="stylesheet" href="./infocss.css">
+  	<title>APMK Bank</title>
+  	<link rel="icon" href="./Images/Logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"> <!--Bootstrap classes used-->
+	<div class="container">
+		<a href="../index.html" class="navbar-brand">
+		APMK Bank
+		</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"> <!--Bootstrap classes used-->
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			<a href="../index.html" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+			<a href="./info.html" class="nav-link">Information</a>
+			</li>
+			<li class="nav-item active">
+			<a href="./calculator.html" class="nav-link">Calculator</a>
+			</li>
+			<li class="nav-item">
+			<a href="./signup.html" class="nav-link">Sign Up</a>
+			</li>
+			<li class="nav-item">
+			<a href="./contactus.html" class="nav-link">Contact Us</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</nav>
+
+	<!--EMI CALCULATOR-->
+	<header class="page-header1">
+		<div class="dark-overlay">
+		  <div class="row">
+			<div class="col-md-6 m-auto text-center">
+			  <br><br><br>
+			  <h1>Calculator</h1>
+			</div>
+		  </div>
+		</div>
+	</header>
+	<br>
+	<div class="container">
+		<section ng-app="calculator">
+			<div ng-controller="emicalculator" class="">
+				<h3 class="text-center">EMI Calculator</h3>
+				<br>
+				<p>EMI or equated monthly installment, as the name suggests, is one part of the equally divided monthly outgoes to clear off an outstanding loan within a stipulated time frame. For a fixed interest rate loan, the EMI remains fixed for the entire tenure of the loan, provided there is no default or part-payment in between. The EMI is used to pay off both the principal and interest components of an outstanding loan. The first EMI has the highest interest component and the lowest principal component. With every subsequent EMI, the interest component keeps on reducing while the principal component keeps rising. Thus, the last EMI has the highest principal component and the lower interest component.</p>
+				<br>
+				<form name="formEmiCalculator" style="padding-left: 30%; padding-right: 30%;">
+					<div class="form-group row">
+						<label class="col-lg-4 col-sm-12 col-form-label">Amount</label>
+						<input type="text" class="form-control col-lg-8 col-sm-12" name="loanAmount" ng-model="loanAmount" required ng-change="update()">
+					</div>
+					<div ng-messages="formEmiCalculator.loanAmount.$error" style="color: maroon" role="alert">
+						<div ng-message="required">Please set Loan Amount</div>
+					</div>					
+					<div class="form-group row">
+						<label class="col-lg-4 col-sm-12 col-form-label">Rate of Interest</label>
+						<input type="number" class="form-control col-lg-8 col-sm-12" name="interestRate" ng-model="interestRate" required ng-change="update()" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01">
+					</div>
+					<div ng-messages="formEmiCalculator.interestRate.$error" style="color: maroon" role="alert">
+						<div ng-message="required">Please set Interest Rate</div>
+					</div>			
+					<div class="form-group row">
+						<label class="col-lg-4 col-sm-12 col-form-label">No. of Years</label>
+						<input type="number" class="form-control col-lg-8 col-sm-12" name="durationYear" ng-model="durationYear" required ng-change="update()">
+					</div>
+					<div ng-messages="formEmiCalculator.durationYear.$error" style="color: maroon" role="alert">
+						<div ng-message="required">Please set loan duration in Years</div>
+					</div>
+			
+			
+					<div ng-messages="formEmiCalculator.summary.$error" style="color: maroon" role="alert">
+						<div ng-message="error">Please set all required value to calculate EMI.</div>
+					</div>
+					<br>
+					<label class="display">EMI: {{EMI}}</label><br />
+					<label class="display">Total Interest: {{TotalInterest}}</label><br />
+					<label class="display">Total Loan: {{TotalLoan}}</label><br />
+				</form>
+				<br>
+			</div>
+		</section>
+	</div>
+
+	<!--FOOTER-->
+	<footer id="main-footer" class="text-center p-4"> <!--Bootstrap classes used-->
+		<div class="container">
+		  <div class="row">
+			<div class="col">
+				<p>Copyright &copy; <span id="year"></span> | APMK Bank | Arya Karambelkar</p> <!--Javascript used-->
+			</div>
+		  </div>
+		</div>	
+    </div>
+	</footer>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<!-- Angular JS included here -->
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js'></script>
+	<script src="./script.js"></script>
+	<script src="./emicalculator.js"></script>
+	<!--Javascript declared here-->
+	<script>
+	// Get the current year for the copyright
+		$('#year').text(new Date().getFullYear());
+
+	//Disable zoom
+    document.addEventListener('touchmove', function(event) {
+    event = event.originalEvent || event;
+    if(event.scale > 1) {
+      	event.preventDefault();
+    }
+    }, false);
+
+	</script>
+
+</body>
+
+</html>

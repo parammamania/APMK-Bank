@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!--Font Awesome Icons included here-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	  crossorigin="anonymous">
+	<!--Bootstrap included here-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	  crossorigin="anonymous">
+	<!--CSS Stylesheet included here-->
+  	<link rel="stylesheet" href="./style.css">
+	  <link rel="stylesheet" href="./contactcss.css">
+  	<title>APMK Bank</title>
+  	<link rel="icon" href="./Images/Logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"> <!--Bootstrap classes used-->
+	<div class="container">
+		<a href="../index.html" class="navbar-brand">
+		APMK Bank
+		</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"> <!--Bootstrap classes used-->
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			<a href="../index.html" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+			<a href="./info.html" class="nav-link">Information</a>
+			</li>
+			<li class="nav-item">
+			<a href="./calculator.html" class="nav-link">Calculator</a>
+			</li>
+			<li class="nav-item">
+			<a href="./signup.html" class="nav-link">Sign Up</a>
+			</li>
+			<li class="nav-item active">
+			<a href="./contactus.html" class="nav-link">Contact Us</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</nav>
+
+	<!-- CONTACT -->
+	<div class="contact-form centered">
+		<div class="first-container">
+		  <div class="info-container">
+			<div><img class="icon"/>
+			  <h3>Address</h3>
+			  <p>815A E Middlefield Rd, Sunnyvale, CA 94086, USA</p>
+			</div>
+			<div> <img class="icon"/>
+			  <h3>Lets Talk</h3>
+			  <p>+1 800 1111111</p>
+			</div>
+			<div><img class="icon"/>
+			  <h3>General Support</h3>
+			  <p>info@info.com</p>
+			</div>
+		  </div>
+		</div>
+		<div class="second-container d-none d-md-block">
+		  <h2>Reach Us</h2>
+		  <p>Feel Free To Contact Us!</p>
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.106319907831!2d-122.05088328520236!3d37.38731784213016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb6fd5a01cf1f%3A0x15f703ddd44913ef!2s815A%20E%20Middlefield%20Rd%2C%20Sunnyvale%2C%20CA%2094086%2C%20USA!5e0!3m2!1sen!2sin!4v1619443862778!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	  </div>
+
+	<!--FOOTER-->
+	<footer id="main-footer" class="text-center p-4"> <!--Bootstrap classes used-->
+		<div class="container">
+		  <div class="row">
+			<div class="col">
+				<p>Copyright &copy; <span id="year"></span> | APMK Bank | Arya Karambelkar</p> <!--Javascript used-->
+			</div>
+		  </div>
+		</div>	
+    </div>
+	</footer>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="./script.js"></script>
+	<!--Javascript declared here-->
+	<script>
+	// Get the current year for the copyright
+		$('#year').text(new Date().getFullYear());
+
+	//Disable zoom
+    document.addEventListener('touchmove', function(event) {
+    event = event.originalEvent || event;
+    if(event.scale > 1) {
+      	event.preventDefault();
+    }
+    }, false);
+
+	</script>
+
+</body>
+
+</html>

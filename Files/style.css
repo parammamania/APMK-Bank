@@ -1,0 +1,157 @@
+body {
+	overflow-x: hidden;
+}
+  
+.navbar .nav-link {
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+.navbar {
+  border-bottom: rgb(32, 136, 255) 6px solid;
+  opacity: 0.95;
+}
+  
+.navbar .nav-item.active {
+	border-left: #444 3px solid;
+}
+  
+.text-custom {
+	font-size: 15px;
+}
+
+/* HOME SECTION STARTS */
+
+#home-section {
+	background: url(./Images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 650px;
+	color: #ffffff;
+}
+
+#home-section .dark-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 650px;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+#home-section .fas {
+	color: #008ed6;
+	background: #fff;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.text-large {
+	font-size: larger;
+}
+
+/* HOME SECTION ENDS */
+
+/* VIDEO SECTION STARTS */
+
+#video-play{
+	position: relative;
+	min-height: 200px;
+	background: url(./Images/bg.jpg);
+	background-position: 0 -300px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #fff;
+}
+
+#video-play .dark-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+}
+  
+  #video-play a{
+	color: #fff;
+}
+
+/* VIDEO SECTION ENDS */
+
+
+/* SIGN UP STARTS */
+
+.centered {
+	text-align: center;
+}
+
+#sign-up-form {
+	background: url(./Images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 1600px;
+	color: #ffffff;
+}
+
+#sign-up-form .dark-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 1600px;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+
+.signup {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: large;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.big-checkbox {
+	width: 20px; height: 18px;
+}
+
+.btn-primary {
+	background-color: rgb(32, 116, 212);
+	border-color: rgb(32, 116, 212);
+}
+
+.custom {
+	color: black;
+	padding: 10%;
+}
+
+.custom:hover {
+	text-decoration: none;
+	color: rgb(32, 116, 212);
+}
+
+/* SIGN UP ENDS */
+
+/* FOOTER STARTS */
+
+#main-footer {
+	background: #000;
+	color: #fff;
+}
+
+/* FOOTER ENDS */
+
+/* CALCULATOR STARTS */
+
+.display {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+/* CALCULATOR ENDS */

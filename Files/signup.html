@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!--Font Awesome Icons included here-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	  crossorigin="anonymous">
+	<!--Bootstrap included here-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	  crossorigin="anonymous">
+  	<!--CSS Stylesheet included here-->
+	<link rel="stylesheet" href="./style.css">
+	<!-- Angular JS included here -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  	<title>APMK Bank</title>
+  	<link rel="icon" href="./Images/Logo.PNG" type="image/x-icon">
+</head>
+
+<body ng-app="">
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"> <!--Bootstrap classes used-->
+	<div class="container">
+		<a href="../index.html" class="navbar-brand">
+		APMK Bank
+		</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"> <!--Bootstrap classes used-->
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			<a href="../index.html" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+			<a href="./info.html" class="nav-link">Information</a>
+			</li>
+			<li class="nav-item">
+			<a href="./calculator.html" class="nav-link">Calculator</a>
+			</li>
+			<li class="nav-item active">
+			<a href="./signup.html" class="nav-link">Sign Up</a>
+			</li>
+			<li class="nav-item">
+			<a href="./contactus.html" class="nav-link">Contact Us</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+	</nav>	
+
+	<!--SIGN UP FORM-->	
+	<div id="sign-up-form">
+	<div class="dark-overlay">
+	<div class="p-5"></div>
+	<section class="container signup">
+		<h2 class="centered">Don't Have An Account?</h2>
+		<p class="centered">Don't worry, Sign Up right now!</p>
+		<form action="#" onsubmit="return validation()">
+			<!--Form element dropdown used here for TYPE OF ACCOUNT-->
+			<div class="input-prepend input-append centered">
+				<div class="btn-group">		
+					<button class="btn dropdown-toggle" name="recordinput" data-toggle="dropdown">
+					Type of Account
+					<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						  <li><a href="#" class="custom">Savings Account</a></li>
+						  <li><a href="#" class="custom">Current Account</a></li>
+						  <li><a href="#" class="custom">Salary Account</a></li>
+					</ul>			   
+				</div>
+			</div>
+			<br>
+			<!--Input type text used here for FIRST NAME with placeholder and autofocus attributes and javascript implemented too-->
+			<div class="form-group row">
+				<label for="fname" class="col-sm-4 col-md-2 col-form-label">First Name</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" id="firstName" autocomplete="off" autofocus placeholder="First Name">
+					</div>
+					<span id="firstNameSpan" class="text-danger" style="font-size: small;"></span>
+				</div>
+			</div>
+			<!--Input type text used here for LAST NAME with placeholder attributes and javascript implemented too-->
+			<div class="form-group row">
+				<label for="lname" class="col-sm-4 col-md-2 col-form-label">Last Name</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" id="lastName" autocomplete="off" placeholder="Last Name">
+					</div>
+					<span id="lastNameSpan" class="text-danger" style="font-size: small;"></span>
+				</div>
+			</div>
+			<!--Input type text used here for EMAIL ID with autocomplete attribute and javascript implemented too-->
+			<div class="form-group row">
+				<label for="email" class="col-sm-4 col-md-2 col-form-label">Email Id</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" id="emails" placeholder="Email Id" autocomplete="off">
+					</div>
+					<span id="emailids" class="text-danger" style="font-size: small;"></span>
+					<small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+				</div>
+			</div>
+			<!--Input type date used here for BIRTHDAY-->
+			<div class="form-group row">
+				<label for="bday" class="col-sm-4 col-md-2 col-form-label">Birthday</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="date" class="form-control" placeholder="Birthday">
+					</div>
+				</div>
+			</div>
+			<!--Input type radio used here for GENDER-->
+			<div class="row">
+				<div class="col-sm-4 col-md-2">
+					<div class="form-check form-check-inline">
+						<label for="gender" class="form-label">Gender</label>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-2">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						<label class="form-check-label" for="inlineRadio1">Male</label>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-2">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+						<label class="form-check-label" for="inlineRadio2">Female</label>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-2">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+						<label class="form-check-label" for="inlineRadio3">Other</label>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!--Input type tel used here for PHONE NUMBER and javascript implemented too-->
+			<div class="form-group row">
+				<label for="phone" class="col-sm-4 col-md-2 col-form-label">Phone</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="tel" class="form-control" id="mobileNumber" placeholder="Phone Number">
+					</div>
+					<span id="mobileno" class="text-danger" style="font-size: small;"></span>
+				</div>
+			</div>
+			<!--Textarea used here for ADDRESS with 3 rows and 10 columns and can store maximum 100 characters-->
+			<div class="form-group row">
+				<label for="address1" class="col-sm-4 col-md-2 col-form-label">Current Address</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<textarea class="form-control" placeholder="Current Address" rows="3" cols="10" maxlength="100"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="address2" class="col-sm-4 col-md-2 col-form-label">Permanent Address</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<textarea class="form-control" placeholder="Permanent Address" rows="3" cols="10" maxlength="100"></textarea>
+					</div>
+				</div>
+			</div>
+			<!--Input type password used here for PASSWORD and javascript implemented too-->
+			<div class="form-group row">
+				<label for="password1" class="col-sm-4 col-md-2 col-form-label">Password</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="password" class="form-control" id="pass" placeholder="Password">
+					</div>
+					<span id="passwords" class="text-danger" style="font-size: small;"></span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="password2" class="col-sm-4 col-md-2 col-form-label">Confirm Password</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="password" class="form-control" id="conpass" placeholder="Confirm Password">
+					</div>
+					<span id="confrmpass" class="text-danger" style="font-size: small;"></span> 
+				</div>
+			</div>
+			<!--Input type file used for uploading SIGNATURE-->
+			<div class="form-group row">
+				<label for="sign" class="col-sm-4 col-md-2 col-form-label">Signature</label>
+				<div class="col-sm-8 col-md-10">
+					<div class="input-group mb-3">
+						<input type="file" id="myfile" name="myfile">
+					</div>
+				</div>
+			</div>
+			<!-- CAPTCHA
+			<p class="centered">
+				<div class="g-recaptcha" data-sitekey="6LdXskUaAAAAAEpSUUc4kk1JqC9_EDRbwoYJNPKP" data-theme="light" data-size="normal" data-image="image"></div>
+			</p>			 -->
+			<br>
+			<p class="lead centered">By signing this form, I acknowledge that the information I've given in this form is accurate and I agree all the terms and conditions.</p>
+			<!--Input type checkbox used here for TERMS AND CONDITIONS-->
+			<p class="centered">
+				<input type="checkbox" ng-model="checked" value="Agree" class="big-checkbox" id="check-green">
+				<label class="text-danger">I agree to the terms and conditions*.</label>
+			</p>
+			<div class="form-group row">
+				<label for="sign" class="col-sm-4 col-form-label"></label>
+				<div class="col-sm-4">
+					<div class="input-group mb-3">
+						<button type="submit" ng-model="button" ng-disabled="!checked" class="btn btn-primary btn-block btn-lg">Submit</button>
+					</div>
+				</div>
+			</div>		
+		</form>
+	</section>
+	<div class="p-3"></div>
+
+	<!--NEWSLETTER-->
+	<section id="newsletter" class="text-center p-5 bg-dark text-white"> <!--Bootstrap classes used-->
+	<div class="container">
+		<div class="row">
+		<div class="col">
+			<h2>Already Have An Account??</h2>
+			<p>-- Just click on the button to login --</p>
+			<button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Login</button>
+			</form>
+		</div>
+		</div>
+	</div>
+	</section>
+
+	<!--CONTACT MODAL-->
+	<div class="modal fade text-dark" id="contactModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title text-primary">Login</h5>
+			<button class="close" data-dismiss="modal">
+			<span>&times;</span>
+			</button>
+		</div>
+		<div class="modal-body" ng-app="myApp" ng-controller="formCtrl">
+			<form>
+				<!--Input type text used here for ACCOUNT NUMBER-->
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-user"></i>
+					</span>
+					</div>
+					<input type="text" ng-model="accNum" class="form-control" placeholder="Account Number">
+				</div>
+				<!--Input type password used here for PASSWORD-->
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-envelope"></i>
+					</span>
+					</div>
+					<input type="password" ng-model="password" class="form-control" placeholder="Password">
+				</div>
+				<input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+			</form>
+		</div>
+		</div>
+	</div>
+	</div>
+
+	<!--FOOTER-->
+	<footer id="main-footer" class="text-center p-4"> <!--Bootstrap classes used-->
+		<div class="container">
+		  <div class="row">
+			<div class="col">
+				<p>Copyright &copy; <span id="year"></span> | APMK Bank | Arya Karambelkar</p> <!--Javascript used-->
+			</div>
+		  </div>
+		</div>	
+    </div>
+	</footer>
+	</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+		crossorigin="anonymous"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="./script.js"></script>
+	<!--Javascript declared here-->
+	<script>
+
+	// Get the current year for the copyright
+		$('#year').text(new Date().getFullYear());
+
+	//Disable zoom
+    document.addEventListener('touchmove', function(event) {
+    event = event.originalEvent || event;
+    if(event.scale > 1) {
+      	event.preventDefault();
+    }
+    }, false);
+
+	//Dropdown Select
+	$(".dropdown-menu li a").click(function(){
+  		var selText = $(this).text();
+  		$(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+	});
+
+	//Angular JS on Form
+	var app = angular.module('myApp', []);
+		app.controller('formCtrl', function($scope) {
+			$scope.accNum = "1111";
+	});
+
+	</script>
+
+</body>
+
+</html>

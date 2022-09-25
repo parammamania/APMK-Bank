@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+	overflow-x: hidden;
+}
+  
+.navbar .nav-link {
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+.navbar {
+  border-bottom: rgb(32, 136, 255) 6px solid;
+  opacity: 0.95;
+}
+  
+.navbar .nav-item.active {
+	border-left: #444 3px solid;
+}
+  
+.text-custom {
+	font-size: 15px;
+}
+
+/* ACCOUNTS SECTION STARTS */
+
+.page-header1 {
+	height: 170px;
+	background: url(./Images/page.jpg);
+	background-position: 0 -360px;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	background-repeat: no-repeat;
+	border-bottom: 1px #eee solid;
+}
+
+.page-header1 h1 {
+	font-size: 60px;
+}
+
+@media (max-width:768px){
+	.page-header1 {
+		height: 180px;
+	}
+	
+	.page-header1 h1 {
+		font-size: 40px;
+	}
+	
+	.page-header1 .dark-overlay {
+		min-height: 180px !important;
+	}
+
+	.flip-card, .flip-card img {
+		width: 100% !important;
+	}
+}
+
+.page-header1 .dark-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 170px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	perspective: 1000px;
+}
+
+.flip-card img {
+	width: 300px;
+	height: 300px;
+	filter: brightness(35%);
+}
+  
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+  
+.flip-card-front {
+	background-color: #bbb;
+	color: black;
+}
+  
+.flip-card-back {
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(180deg);
+	padding: 20px;
+}
+
+.card-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+/* ACCOUNTS SECTION ENDS */
+
+/* CARDS SECTION STARTS */
+
+.page-header2 {
+	height: 120px;
+	background: url(./Images/page.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	background-repeat: repeat-y;
+	border-bottom: 1px #eee solid;
+}
+
+.page-header2 h1 {
+	font-size: 60px;
+}
+
+.page-header2 .dark-overlay {
+	position: absolute;
+	width: 100%;
+	min-height: 120px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,900;1,100&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap");
+
+.card {
+	position: relative;
+	width: 350px;
+	height: 250px;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	z-index: 0;
+	background: #454545;
+	border-radius: 15px;
+}
+
+@media (max-width:768px){
+	.card {
+		width: 100%;
+		height: 210px;
+		transform-style: preserve-3d;
+		border-radius: 10px;
+	}
+
+	.card .face {
+		border-radius: 10px;
+	}
+
+	.card .face.front .number {
+		bottom: 80px !important;
+		left: 70px !important;
+		padding-left: 80px;
+		letter-spacing: 3px;
+		font-size: 15px;
+	}	
+
+	.card .face.front .cardHolder {
+		bottom: 25px !important;
+	}
+
+	.card .face.front:before {
+		bottom: 20px !important;
+		right: 20px !important;
+		width: 30px !important;
+		height: 30px !important;
+	}
+	  
+	.card .face.front:after {
+		bottom: 20px !important;
+		right: 40px !important;
+		width: 30px !important;
+		height: 30px !important;
+	}
+}
+
+.card .face {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	backdrop-filter: preserve-3d;
+	transition: 1s;
+}
+  
+.card .face.front:before {
+	content: "";
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	width: 60px;
+	height: 60px;
+	background: #e00d0d;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+  
+.card .face.front:after {
+	content: "";
+	position: absolute;
+	bottom: 40px;
+	right: 80px;
+	width: 60px;
+	height: 60px;
+	background: #ffce00;
+	border-radius: 50%;
+	opacity: 0.7;
+}
+  
+.card .face.front .debit {
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	color: white;
+	font-weight: 500;
+}
+  
+.card .face.front .bank {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	color: #fff;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 24px;
+}
+  
+.card .face.front .chip {
+	position: absolute;
+	top: 70px;
+	left: 10px;
+	max-width: 84px;
+}
+  
+.card .face.front .number {
+	position: absolute;
+	bottom: 120px;
+	left: 24px;
+	color: white;
+	font-weight: 500;
+	padding-left: 80px;
+	letter-spacing: 3px;
+	font-size: 15px;
+	text-shadow: 0 2px 1px #0a0a0a;
+	font-family: "Orbitron", sans-serif;
+}
+  
+.card .face.front .valid {
+	position: absolute;
+	bottom: 70px;
+	left: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 300;
+	line-height: 1em;
+	text-align: right;
+	font-family: "Orbitron", sans-serif;
+	font-size: 18px;
+}
+  
+.card .face.front .valid span:last-child {
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+  
+.card .face.front .cardHolder {
+	position: absolute;
+	bottom: 40px;
+	left: 26px;
+	color: white;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.card:hover {
+	transform: scale(1.1);
+}
+
+/* CARDS SECTION ENDS */
+
+/* LOANS SECTION STARTS */
+
+.page-header3 {
+	height: 120px;
+	background: url(./Images/page.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	background-repeat: repeat-y;
+	border-bottom: 1px #eee solid;
+}
+
+.page-header3 h1 {
+	font-size: 60px;
+}
+
+.page-header3 .dark-overlay {
+	position: absolute;
+	width: 100%;
+	min-height: 120px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.mycontainer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+}
+
+.loan {
+  display: flex;
+  height: 280px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem rgb(126, 124, 124);
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+@media (max-width:768px){
+	.loan {
+		display: block !important;
+		height: 280px;
+		width: 280px;
+		border-radius: 10px;
+		box-shadow: -1rem 0 3rem rgb(126, 124, 124);
+	  /*   margin-left: -50px; */
+		transition: 0.4s ease-out;
+		position: relative;
+		left: 0px;
+	  }
+}
+
+.loan:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: black;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+/* LOAN SECTION ENDS */
+
+/* FOOTER STARTS */
+
+#main-footer {
+	background: #000;
+	color: #fff;
+}
+
+/* FOOTER ENDS */
